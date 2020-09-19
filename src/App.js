@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function App() {
-	return <Wrapper>리액트 메신저</Wrapper>;
-}
+import ChattingScreen from './components/ChattingScreen';
 
-export default App;
+export default function App() {
+	return (
+		<Wrapper>
+			<ChattingScreen></ChattingScreen>
+		</Wrapper>
+	);
+}
 
 const Wrapper = styled.div`
 	height: 100vh;
