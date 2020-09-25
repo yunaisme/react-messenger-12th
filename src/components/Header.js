@@ -16,6 +16,8 @@ export default function Header({sender, senderImg}) {
 	)
 }
 const Wrapper = styled.div`
+	position: sticky;
+	top: 0;
 	display: flex;
 	flex-direction: row;
 	background-color: white;

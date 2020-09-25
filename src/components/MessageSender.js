@@ -11,6 +11,8 @@ export default function MessageSender() {
 	);
 }
 const Wrapper = styled.div`
+	position: sticky;
+	bottom: 0;
 	display: flex;
 	flex-direction: row;
 	background-color white;
