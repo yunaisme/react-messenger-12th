@@ -22,7 +22,8 @@ export default function ChattingScreen() {
 
 	return (
 		<Wrapper>
-			<Header></Header>
+			<Header sender = '고은' senderImg = {EUNKO} ></Header>
+			대화 내용이 보이는 곳
 			<MessageSender></MessageSender>
 		</Wrapper>
 	);
