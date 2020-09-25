@@ -13,10 +13,11 @@ export default function MessageSender() {
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	background-color: blue;
+	background-color white;
+	opacity: 0.8;
 	padding: 10px;
-
 	input {
+		border: none;
 		margin-right: 10px;
 		flex: 1;
 		font-size: 15px;
@@ -24,12 +25,18 @@ const Wrapper = styled.div`
 		border: 1px solid rgba(0, 0, 0, 0.3);
 		border-radius: 15px;
 	}
+	input: focus{
+		outline: none;
+	}
 	button {
+		border: 0;
+		outline: 0;
 		font-size:15px;
 		width: 65px;
 		height: 50px;
 		border: none;
 		border-radius: 20px;
 		background-color: rgb(255,224,102);
+		opacity: 1;
 	}
 `;

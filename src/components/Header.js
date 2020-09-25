@@ -18,18 +18,23 @@ export default function Header({sender, senderImg}) {
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	background-color: blue;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+	opacity: 0.8;
 	color: black;
 	button {
+		border: 0;
+		outline: 0;
 		height: 80px;
 		margin: 0 0 0 10px;
 		background-color: white;
 		border: none;
 	}
 	img {
+		opacity: 1;
 		width: 70px;
 		height: 70px;
-		border-radius: 15px;
+		border-radius: 20px;
 	}
 `;
 
@@ -38,6 +43,8 @@ const SenderInfo = styled.div`
 	flex-direction: column;
 	margin: 15px 0 0 10px;
 	h2 {
+		font-weight: normal;
+		font-size: 25px;
 		margin: 0;
 	}
 `;
