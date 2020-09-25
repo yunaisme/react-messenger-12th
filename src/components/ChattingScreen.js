@@ -42,6 +42,10 @@ export default function ChattingScreen() {
 	let currentSenderName = currentSender ? USER_T_NAME : USER_F_NAME;
 	let currentSenderIMG = currentSender ? USER_T_IMG : USER_F_IMG;
 
+	useEffect(() => {
+		window.scrollBy(0, window.innerHeight);
+	}, [currentMsglist]);
+
 	return (
 		<Wrapper>
 			<Header sender = {currentSenderName} senderImg = {currentSenderIMG} changeSender = {changeSender} ></Header>
