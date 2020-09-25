@@ -53,6 +53,7 @@ export default function ChattingScreen() {
 				<PrintOneMessage sender = {message.user} message = {message.content}/>
 			)}
 			<MessageSender message = {newMsg.content} changeNewMsg = {changeNewMsg} updateMsglist = {updateMsglist} ></MessageSender>
+			<EmptySpace/>
 		</Wrapper>
 	);
 }
@@ -75,6 +76,10 @@ function PrintOneMessage({sender, message}) {
 		);
 	}
 }
+
+const EmptySpace = styled.div`
+	height: 70px;
+`;
 
 const Wrapper = styled.div`
 	background-color: rgb(171,193,209);

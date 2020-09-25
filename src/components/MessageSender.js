@@ -13,7 +13,9 @@ export default function MessageSender({message, changeNewMsg, updateMsglist}) {
 	);
 }
 const Wrapper = styled.div`
-	position: sticky;
+	box-sizing: border-box;
+	width: 100%;
+	position: fixed;
 	bottom: 0;
 	background-color: rgba(255,255,255,0.8);
 	padding: 10px;
@@ -22,10 +24,12 @@ const Wrapper = styled.div`
 		flex-direction: row;
 	}
 	input {
+		box-sizing: border-box;
 		background-color: rgba(0,0,0,0);
-		height: 45px;
+		height: 50px;
 		border: none;
 		margin: 0 10px 0 0;
+		padding: 10px;
 		flex: 1;
 		font-size: 15px;
 		border: 1px solid rgba(0, 0, 0, 0.3);
