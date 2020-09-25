@@ -26,7 +26,10 @@ export default function ChattingScreen() {
 
 	return (
 		<Wrapper>
-			<Header sender = {USER_T_NAME} senderImg = {USER_T_IMG} ></Header>			
+			<Header sender = {USER_T_NAME} senderImg = {USER_T_IMG} ></Header>
+			{MSGLIST.map((message) => 
+				<PrintOneMessage sender = {message.user} message = {message.content}/>
+			)}
 			<MessageSender></MessageSender>
 		</Wrapper>
 	);

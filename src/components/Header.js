@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export default function Header({sender, senderImg}) {
 	return (
 		<Wrapper>
-			{/* 발신자 변경해주는 상단바 */}
 			<button>
 				<img src={senderImg} alt="senderImg"/>
 			</button>
@@ -20,20 +19,18 @@ const Wrapper = styled.div`
 	top: 0;
 	display: flex;
 	flex-direction: row;
-	background-color: white;
+	background-color: rgba(255,255,255,0.8);
 	box-shadow: 0 0 20px rgba(0,0,0,0.4);
-	opacity: 0.8;
 	color: black;
 	button {
 		border: 0;
 		outline: 0;
 		height: 80px;
 		margin: 0 0 0 10px;
-		background-color: white;
+		background-color: rgba(0,0,0,0);
 		border: none;
 	}
 	img {
-		opacity: 1;
 		width: 70px;
 		height: 70px;
 		border-radius: 20px;

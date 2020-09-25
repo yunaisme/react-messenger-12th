@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export default function MessageSender() {
 	return (
-		// 메시지 전송부
 		<Wrapper>
 			<input></input>
 			<button type="submit">전송</button>
@@ -15,17 +14,17 @@ const Wrapper = styled.div`
 	bottom: 0;
 	display: flex;
 	flex-direction: row;
-	background-color white;
-	opacity: 0.8;
+	background-color: rgba(255,255,255,0.8);
 	padding: 10px;
 	input {
+		background-color: rgba(0,0,0,0);
+		height: 45px;
 		border: none;
-		margin-right: 10px;
+		margin: 0 10px 0 0;
 		flex: 1;
 		font-size: 15px;
-		height: 50px;
 		border: 1px solid rgba(0, 0, 0, 0.3);
-		border-radius: 15px;
+		border-radius: 20px;
 	}
 	input: focus{
 		outline: none;
@@ -39,6 +38,5 @@ const Wrapper = styled.div`
 		border: none;
 		border-radius: 20px;
 		background-color: rgb(255,224,102);
-		opacity: 1;
 	}
 `;
