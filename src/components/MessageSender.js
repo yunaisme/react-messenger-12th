@@ -1,21 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function MessageSender() {
+export default function MessageSender({message, changeNewMsg, updateMsglist}) {
+	
 	return (
 		<Wrapper>
-			<input></input>
-			<button type="submit">전송</button>
+			<form onSubmit={updateMsglist}>
+				<input onChange={changeNewMsg} value={message}></input>
+				<button type="submit">전송</button>
+			</form>
 		</Wrapper>
 	);
 }
 const Wrapper = styled.div`
 	position: sticky;
 	bottom: 0;
-	display: flex;
-	flex-direction: row;
 	background-color: rgba(255,255,255,0.8);
 	padding: 10px;
+	form {
+		display: flex;
+		flex-direction: row;
+	}
 	input {
 		background-color: rgba(0,0,0,0);
 		height: 45px;

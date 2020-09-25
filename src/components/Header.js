@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Header({sender, senderImg}) {
+export default function Header({sender, senderImg, changeSender}) {
+	
 	return (
 		<Wrapper>
-			<button>
+			<button onClick ={changeSender}>
 				<img src={senderImg} alt="senderImg"/>
 			</button>
 			<SenderInfo>
