@@ -43,10 +43,8 @@ export default function ChattingScreen() {
 		setCurrentMsglist([...currentMsglist, newMsg]);
 		setNewMsg({user: currentSender, content: ''});
 	}
-
 	let currentSenderName = currentSender ? USER_T_NAME : USER_F_NAME;
 	let currentSenderIMG = currentSender ? USER_T_IMG : USER_F_IMG;
-
 	useEffect(() => {
 		window.scrollBy(0, window.innerHeight);
 	}, [currentMsglist]);
@@ -62,7 +60,6 @@ export default function ChattingScreen() {
 		</Wrapper>
 	);
 }
-
 const Wrapper = styled.div`
 	background-color: rgb(171,193,209);
 `;
