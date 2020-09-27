@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import Header from './Header';
 import MessageSender from './MessageSender';
+import Message from './Message';
 
 const USER_T_NAME = '고은';
 const USER_F_NAME = '정쿨';
@@ -22,16 +23,19 @@ export default function ChattingScreen() {
 		{ user: false, content: '그만 말해줘도 돼' },
 		{ user: true, content: 'ㅠㅠ' },
 	]);
-	function changeSender(e){
-		e.preventDefault();
+	function handleSenderButtonClick(event){
+		event.preventDefault();
 		setCurrentSender(!currentSender);
 	}
-	function changeNewMsg(e){
-		e.preventDefault();
-		setNewMsg({user: currentSender, content: e.target.value});
+	function handleNewMessageInputChange(event){
+		event.preventDefault();
+		setNewMsg({user: currentSender, content: event.target.value});
 	}
-	function updateMsglist(e){
-		e.preventDefault();
+	function handleMessageSendFormSubmit(event){
+		event.preventDefault();
+		sendMessage();
+	}
+	function sendMessage(){
 		if(newMsg.content === ''){
 			alert('메시지를 입력해주세요');
 			return;
@@ -39,6 +43,7 @@ export default function ChattingScreen() {
 		setCurrentMsglist([...currentMsglist, newMsg]);
 		setNewMsg({user: currentSender, content: ''});
 	}
+
 	let currentSenderName = currentSender ? USER_T_NAME : USER_F_NAME;
 	let currentSenderIMG = currentSender ? USER_T_IMG : USER_F_IMG;
 
@@ -48,69 +53,19 @@ export default function ChattingScreen() {
 
 	return (
 		<Wrapper>
-			<Header sender = {currentSenderName} senderImg = {currentSenderIMG} changeSender = {changeSender} ></Header>
+			<Header sender = {currentSenderName} senderImg = {currentSenderIMG} changeSender = {handleSenderButtonClick} ></Header>
 			{currentMsglist.map((message) =>
-				<PrintOneMessage sender = {message.user} message = {message.content}/>
+				<Message sender = {message.user} message = {message.content}/>
 			)}
-			<MessageSender message = {newMsg.content} changeNewMsg = {changeNewMsg} updateMsglist = {updateMsglist} ></MessageSender>
+			<MessageSender messageContent = {newMsg.content} changeNewMsg = {handleNewMessageInputChange} updateMsglist = {handleMessageSendFormSubmit} ></MessageSender>
 			<EmptySpace/>
 		</Wrapper>
 	);
 }
 
-function PrintOneMessage({sender, message}) {
-	if(sender) {
-		return (
-			<LeftMessage>
-				<img src={USER_T_IMG} alt="senderImg"/>
-				<div className="content">{message}</div>
-			</LeftMessage>
-		);
-	}
-	else {
-		return(
-			<RightMessage>
-				<img src={USER_F_IMG} alt="senderImg"/>
-				<div className="content">{message}</div>
-			</RightMessage>
-		);
-	}
-}
-
-const EmptySpace = styled.div`
-	height: 70px;
-`;
-
 const Wrapper = styled.div`
 	background-color: rgb(171,193,209);
 `;
-
-const PrintOneMessageStyle = styled.div`
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	img {
-		weight: 50px;
-		height: 50px;
-		border-radius: 20px;
-		margin: 10px;
-		box-shadow: 0 0 10px rgba(0,0,0,0.2);
-	}
-	.content{
-		display: flex;
-		align-items: center;
-		padding: 0 10px 0 10px;
-		height: 45px;
-		border-radius: 10px;
-		background-color: white;
-		box-shadow: 0 0 15px rgba(0,0,0,0.1);
-	}
-`;
-
-const LeftMessage = styled(PrintOneMessageStyle)`
-	flex-direction: row;
-`;
-
-const RightMessage = styled(PrintOneMessageStyle)`
-	flex-direction: row-reverse;
+const EmptySpace = styled.div`
+	height: 70px;
 `;

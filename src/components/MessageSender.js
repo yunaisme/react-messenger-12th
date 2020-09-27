@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function MessageSender({message, changeNewMsg, updateMsglist}) {
+export default function MessageSender({messageContent, changeNewMsg, updateMsglist}) {
 	
 	return (
 		<Wrapper>
-			<form onSubmit={updateMsglist}>
-				<input onChange={changeNewMsg} value={message}></input>
-				<button type="submit">전송</button>
-			</form>
+			<InputForm onSubmit={updateMsglist}>
+				<InputMessage onChange={changeNewMsg} value={messageContent} />
+				<SendButton type="submit">전송</SendButton>
+			</InputForm>
 		</Wrapper>
 	);
 }
@@ -19,33 +19,32 @@ const Wrapper = styled.div`
 	bottom: 0;
 	background-color: rgba(255,255,255,0.8);
 	padding: 10px;
-	form {
-		display: flex;
-		flex-direction: row;
-	}
-	input {
-		box-sizing: border-box;
-		background-color: rgba(0,0,0,0);
-		height: 50px;
-		border: none;
-		margin: 0 10px 0 0;
-		padding: 10px;
-		flex: 1;
-		font-size: 15px;
-		border: 1px solid rgba(0, 0, 0, 0.3);
-		border-radius: 20px;
-	}
-	input: focus{
+`
+const InputForm = styled.form`
+	display: flex;
+`;
+const InputMessage = styled.input`
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0);
+	height: 50px;
+	border: none;
+	margin: 0 10px 0 0;
+	padding: 10px;
+	flex: 1;
+	font-size: 15px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+	&: focus {
 		outline: none;
 	}
-	button {
-		border: 0;
-		outline: 0;
-		font-size:15px;
-		width: 65px;
-		height: 50px;
-		border: none;
-		border-radius: 20px;
-		background-color: rgb(255,224,102);
-	}
+`;
+const SendButton = styled.button`
+	border: 0;
+	outline: 0;
+	font-size:15px;
+	width: 65px;
+	height: 50px;
+	border: none;
+	border-radius: 20px;
+	background-color: rgb(255,224,102);
 `;
