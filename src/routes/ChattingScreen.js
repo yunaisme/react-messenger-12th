@@ -52,17 +52,27 @@ export default function ChattingScreen() {
 	return (
 		<Wrapper>
 			<Header sender = {currentSenderName} senderImg = {currentSenderIMG} changeSender = {handleSenderButtonClick} ></Header>
-			{currentMsglist.map((message) =>
-				<Message sender = {message.user} message = {message.content}/>
-			)}
+			<MessageList>
+				<EmptySpace/>
+				{currentMsglist.map((message) =>
+					<Message sender = {message.user} message = {message.content}/>
+				)}
+				<EmptySpace/>
+			</MessageList>
 			<MessageSender messageContent = {newMsg.content} changeNewMsg = {handleNewMessageInputChange} updateMsglist = {handleMessageSendFormSubmit} ></MessageSender>
-			<EmptySpace/>
 		</Wrapper>
 	);
 }
 const Wrapper = styled.div`
+	height: 100vh;
 	background-color: rgb(171,193,209);
 `;
 const EmptySpace = styled.div`
-	height: 70px;
+	height: 80px;
+`;
+
+const MessageList = styled.div`
+	background-color: rgb(171,193,209);
+	padding: 0;
+	margin: 0;
 `;

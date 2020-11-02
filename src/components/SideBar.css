@@ -1,0 +1,42 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(92, 92, 92);
+    width: 100px;
+    height: 100%;
+    padding: 30px;
+    position: fixed;
+}
+
+a {
+    width: 40px; 
+    height: 40px;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    background-color: rgba(255,255,255,0);
+    height: 40px;
+    width: 40px;
+    margin-bottom: 30px;
+}
+
+img{
+    width: 40px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.link{
+    flex-direction: row;
+    height: 50%;
+}
+
+.noLink {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 50%;
+}

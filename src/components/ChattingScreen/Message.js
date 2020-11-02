@@ -26,6 +26,7 @@ const MessageStyle = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin: 0;
 `;
 const SenderMessageImg = styled.img`
     weight: 50px;

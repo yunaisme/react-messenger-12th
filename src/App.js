@@ -11,10 +11,12 @@ export default function App() {
 	return (
 		<HashRouter>
 			<SideBar />
-			<Route path="/" exact={true} component={User}/>
-			<Route path="/chatting" exact={true} component={Chatting}/>
-			<Route path="/chatting/:id" exact={true} component={ChattingScreen}/>
-			<Route path="/setting" exact={true} component={Setting}/>
+			<div className="content">
+				<Route path="/" exact={true} component={User}/>
+				<Route path="/chatting" exact={true} component={Chatting}/>
+				<Route path="/chatting/:id" exact={true} component={ChattingScreen}/>
+				<Route path="/setting" exact={true} component={Setting}/>
+			</div>
 		</HashRouter>
 	);
 }

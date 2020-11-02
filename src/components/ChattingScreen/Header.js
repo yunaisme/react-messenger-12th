@@ -15,7 +15,9 @@ export default function Header({sender, senderImg, changeSender}) {
 	)
 }
 const Wrapper = styled.div`
-	position: sticky;
+	width: 100%;
+	height: 85px;
+	position: fixed;
 	top: 0;
 	display: flex;
 	flex-direction: row;
@@ -35,11 +37,12 @@ const SenderImg = styled.img`
 	width: 70px;
 	height: 70px;
 	border-radius: 20px;
+	margin: 5px 0 0 35px;
 `;
 const SenderInfo = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin: 15px 0 0 10px;
+	margin: 10px 0 0 50px;
 `;
 const SenderName = styled.h2`
 	font-weight: normal;
