@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import Header from './Header';
-import MessageSender from './MessageSender';
-import Message from './Message';
+import Header from '../components/ChattingScreen/Header';
+import MessageSender from '../components/ChattingScreen/MessageSender';
+import Message from '../components/ChattingScreen/Message';
 
 const USER_T_NAME = '고은';
 const USER_F_NAME = '정쿨';
