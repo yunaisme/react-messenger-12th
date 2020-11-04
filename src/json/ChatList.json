@@ -1,0 +1,64 @@
+{
+    "chatList" : [
+        {
+            "id": 1,
+            "name": "빨강",
+            "image": "../img/red.PNG",
+            "lastMsg": "빨강입니다"
+        },
+        {
+            "id": 2,
+            "name": "주황",
+            "image": "../img/orange.PNG",
+            "lastMsg": "주황입니다"
+        },
+        {
+            "id": 3,
+            "name": "노랑",
+            "image": "../img/yellow.PNG",
+            "lastMsg": "노랑입니다"
+        },
+        {
+            "id": 4,
+            "name": "초록",
+            "image": "../img/green.PNG",
+            "lastMsg": "초록입니다"
+        },
+        {
+            "id": 5,
+            "name": "파랑",
+            "image": "../img/skyblue.PNG",
+            "lastMsg": "파랑입니다"
+        },
+        {
+            "id": 6,
+            "name": "남남",
+            "image": "../img/blue.PNG",
+            "lastMsg": "남남입니다"
+        },
+        {
+            "id": 7,
+            "name": "보라",
+            "image": "../img/purple.PNG",
+            "lastMsg": "보라입니다"
+        },
+        {
+            "id": 8,
+            "name": "흑흑",
+            "image": "../img/black.PNG",
+            "lastMsg": "흑흑입니다"
+        },
+        {
+            "id": 9,
+            "name": "백백",
+            "image": "../img/white.PNG",
+            "lastMsg": "백백입니다"
+        },
+        {
+            "id": 10,
+            "name": "회회",
+            "image": "../img/grey.PNG",
+            "lastMsg": "회회입니다"
+        }
+    ]
+}

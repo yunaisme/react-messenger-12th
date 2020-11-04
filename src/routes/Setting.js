@@ -5,12 +5,12 @@ import DEFAULT_PROFILE from '../img/default_profile.PNG';
 export default function Setting() {
     return(
         <Wrapper>
-            <Title>설정</Title>
+            <Title>더보기</Title>
             <Profile>
                 <ProfileImg src={DEFAULT_PROFILE} alt="default profile"></ProfileImg>
                 <ProfileDesc>
-                    <div>황유나</div>
-                    <div>kkkkkk@kkkk.com</div>
+                    <ProfileName>황유나</ProfileName>
+                    <ProfileState>kkkkkk@kkkk.com</ProfileState>
                 </ProfileDesc>
             </Profile>
             <Menu>
@@ -36,6 +36,7 @@ const Profile = styled.div`
     margin: 20px 0 20px 40px;
 `;
 const ProfileImg = styled.img`
+    width: 50px;
     margin: 0;
     border-radius: 20px;
 `;
@@ -53,4 +54,12 @@ const MenuTab = styled.h3`
     font-weight: normal;
     padding-top: 20px;
     margin: 0;
+`;
+const ProfileName = styled.div`
+    font-weight: bold;
+`;
+const ProfileState = styled.div`
+    margin-top: 5px;
+    color: grey;
+    font-size: 12px;
 `;
