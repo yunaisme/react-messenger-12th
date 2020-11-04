@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const USER_T_IMG = 'https://img.techpowerup.org/200908/eun.png';
-const USER_F_IMG = 'https://img.techpowerup.org/200908/NjRiY2JjOGU5YzQz.png';
-
 export default function Message({sender, senderTImg, senderFImg, message}) {
 	if(sender) {
 		return (
