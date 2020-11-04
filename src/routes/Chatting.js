@@ -1,5 +1,5 @@
 import React from 'react';
-import './Chatting.css';
+import styled from 'styled-components';
 
 export default function Chatting() {
     return(

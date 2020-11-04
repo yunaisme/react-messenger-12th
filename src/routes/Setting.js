@@ -23,7 +23,6 @@ export default function Setting() {
         </Wrapper>
     );
 }
-
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;

@@ -48,5 +48,4 @@ const SendButton = styled.button`
 	border: none;
 	border-radius: 20px;
 	background-color: rgb(255,224,102);
-	padding-top: 15px;
 `;
